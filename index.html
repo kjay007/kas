@@ -9,7 +9,10 @@
     <!-- AOS Animation Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
-     
+
+      <!-- skill icon -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         :root {
             --primary-color: #dc3545;
@@ -67,7 +70,7 @@
         .hero-section {
             min-height: 90vh;
             display: flex;
-            align-items: center;
+            align-items: center ;
             padding-top: 80px;
         }
 
@@ -541,15 +544,9 @@
 }
 
 /* Experience Card Styling */
-.experience-card {
-    background: rgba(220, 53, 69, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-top: 2rem;
-    backdrop-filter: blur(5px);
-    transform: translateY(20px);
-    opacity: 0;
-}
+.experience-card    
+     
+ 
 
 .experience-header {
     margin-bottom: 1.5rem;
@@ -926,6 +923,217 @@
                 height: 50px;
             }
         }
+
+                /* s logo */
+        .software-icons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .software-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid transparent;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .software-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 120%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .software-icon:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Photoshop */
+        .ps {
+            color: #31A8FF;
+            background: rgba(49, 168, 255, 0.1);
+            box-shadow: 0 0 15px rgba(49, 168, 255, 0.1);
+        }
+        .ps:hover {
+            background: #31A8FF;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 20px rgba(49, 168, 255, 0.4);
+        }
+
+        /* Illustrator */
+        .ai {
+            color: #FF9A00;
+            background: rgba(255, 154, 0, 0.1);
+            box-shadow: 0 0 15px rgba(255, 154, 0, 0.1);
+        }
+        .ai:hover {
+            background: #FF9A00;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 154, 0, 0.4);
+        }
+
+        /* Premiere Pro */
+        .pr {
+            color: #ff00aa;
+            background: rgba(153, 153, 255, 0.1);
+            box-shadow: 0 0 15px rgba(153, 153, 255, 0.1);
+        }
+        .pr:hover {
+            background: #9999FF;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 20px rgba(153, 153, 255, 0.4);
+        }
+
+        /* After Effects */
+        .ae {
+            color: #9999FF;
+            background: rgba(153, 153, 255, 0.1);
+            box-shadow: 0 0 15px rgba(153, 153, 255, 0.1);
+        }
+        .ae:hover {
+            background: #9999FF;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 20px rgba(153, 153, 255, 0.4);
+        }
+
+        /* DaVinci Resolve */
+        .dr {
+            color: #FF5733;
+            background: rgba(255, 87, 51, 0.1);
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.1);
+        }
+        .dr:hover {
+            background: #FF5733;
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 87, 51, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .software-icons {
+                gap: 15px;
+            }
+            
+            .software-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+          /* skill icon */
+
+          .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+            border-color: #dc3545;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #dc3545;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .skill-title {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #dc3545;
+            transition: width 0.3s ease;
+        }
+
+        .skill-card:hover .skill-title::after {
+            width: 50%;
+        }
+
+        .skill-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .glow {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(220, 53, 69, 0.3), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .skill-card:hover .glow {
+            opacity: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
@@ -975,22 +1183,25 @@
                         <button class="btn btn-outline-light btn-lg btn-custom">Contact Me</button>
                     </div>
                 </div>
+                
                 <div class="col-lg-6" data-aos="fade-left">
+
+                    <br>
                     <div class="hero-image">
-                        <img href="https://ibb.co/q5QFJ2q" alt="Professional headshot" class="img-fluid rounded-4">
+                        <img src="https://i.ibb.co/Dp2grjc/profile777.png" alt="Professional headshot" class="img-fluid rounded-4">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <br>
     <!-- Statistics Section -->
     <section class="py-5">
         <div class="container">
             <div class="row g-4" data-aos="fade-up">
                 <div class="col-md-4">
                     <div class="stats-card text-center p-4">
-                        <div class="counter" data-target="50">0</div>
+                        <div class="counter" data-target="70">0</div>
                         <p class="mb-0">Happy Clients</p>
                     </div>
                 </div>
@@ -1016,18 +1227,21 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="skill-card p-4">
+                        <i class="skill-icon fas fa-video"></i>
                         <h3 class="h5 mb-3">Video Editing</h3>
                         <p class="text-secondary mb-0">Professional expertise in industry-standard tools and techniques.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="skill-card p-4">
+                        <i class="skill-icon fas fa-layer-group"></i>
                         <h3 class="h5 mb-3">Motion Graphics</h3>
                         <p class="text-secondary mb-0">Creating engaging and dynamic motion graphics for various platforms.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill-card p-4">
+                        <i class="skill-icon fas fa-palette"></i>
                         <h3 class="h5 mb-3">Color Grading</h3>
                         <p class="text-secondary mb-0">Expert color correction and grading for professional results.</p>
                     </div>
@@ -1038,14 +1252,15 @@
 
     <!-- Portfolio Section -->
     <section id="work" class="py-5">
-    <div class="container">
+        <div data-aos="fade-up">
+            <div class="container">
         <h1 class="portfolio-title">Portfolio</h1>
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
             <div class="portfolio-item">
                 <img src="https://img.youtube.com/vi/OSMCDO_uCpE/maxresdefault.jpg" alt="Project 1 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 1</h3>
+                  <!--  <h3 class="project-title">Project 1</h3> -->
                     <a href="https://youtu.be/OSMCDO_uCpE" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
@@ -1053,15 +1268,15 @@
             <div class="portfolio-item">
                 <img src="https://img.youtube.com/vi/YMeeAT87pUc/maxresdefault.jpg" alt="Project 2 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 2</h3>
+                   <!-- <h3 class="project-title">Project 2</h3> -->
                     <a href="https://youtu.be/YMeeAT87pUc" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
-            <!-- Portfolio Item 3 -->
+            <!--  Portfolio Item 3 -->
             <div class="portfolio-item">
                 <img src="https://img.youtube.com/vi/70msUcOn0o0/maxresdefault.jpg" alt="Project 3 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 3</h3>
+                  <!--  <h3 class="project-title">Project 3</h3> -->
                     <a href="https://youtu.be/70msUcOn0o0" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
@@ -1069,15 +1284,15 @@
             <div class="portfolio-item">
                 <img src="https://img.youtube.com/vi/Pvo47UFXTrk/maxresdefault.jpg" alt="Project 4 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 4</h3>
+                   <!-- <h3 class="project-title">Project 4</h3>-->
                     <a href="https://youtu.be/Pvo47UFXTrk" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
             <!-- Portfolio Item 5 -->
             <div class="portfolio-item">
-                <img src="kale copy 2.png" alt="Project 5 Thumbnail">
+                <img  src="https://i.ibb.co/ZgyYBp1/kale-copy-2.png"alt="Project 5 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 5</h3>
+                  <!--  <h3 class="project-title">Project 5</h3> -->
                     <a href="https://youtube.com/shorts/O8AdlE-gGXg" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
@@ -1085,13 +1300,27 @@
             <div class="portfolio-item">
                 <img src="https://img.youtube.com/vi/GedmLbtk4vw/maxresdefault.jpg" alt="Project 6 Thumbnail">
                 <div class="portfolio-overlay">
-                    <h3 class="project-title">Project 6</h3>
+                  <!--  <h3 class="project-title">Project 6</h3> -->
                     <a href="https://www.youtube.com/watch?v=GedmLbtk4vw" class="view-project-btn" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
     </div>
     </section>
+
+<!--S logo-->
+    <div class="software-container" data-aos="fade">
+        <div class="software-wrapper">
+            
+            <div class="software-icons">
+                <a href="#" class="software-icon ps" title="Adobe Photoshop">Ps</a>
+                <a href="#" class="software-icon ai" title="Adobe Illustrator">Ai</a>
+                <a href="#" class="software-icon pr" title="Adobe Premiere Pro">Pr</a>
+                <a href="#" class="software-icon ae" title="Adobe After Effects">Ae</a>
+                <a href="#" class="software-icon dr" title="DaVinci Resolve">Dr</a>
+            </div>
+        </div>
+    </div>
 
     <!--about-->
 
@@ -1100,7 +1329,7 @@
             <div class="about-section">
                 <div class="about-grid">
                     <div class="about-content">
-                        <h1>About Me</h1>
+                        <h1 data-aos="fade ">About Me</h1>
                         <p>A creative and detail-oriented video editor with 3 years of experience creating high-quality video content across platforms. Proficient in Adobe Premiere Pro, DaVinci Resolve, and After Effects. Passionate about storytelling, visual quality, and collaboration.</p>
                         
                         <div class="skills-section">
@@ -1190,21 +1419,13 @@
                     <div class="timeline-content">
                         <h3>Freelance Video Editor</h3>
                         <h4>Fiverr</h4>
-                        <p class="year">2022
-                            <li>Delivered professional edits, color correction, and audio synchronization</li>
-                            <li>Managed multiple projects to meet deadlines and exceed client expectations</li>
-                            <li>Worked on promotional videos, social media content, and YouTube videos</li>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <!-- Experience Section -->
-        <div class="timeline-section experience">
-            <h2 class="section-title">Experience</h2>
+                        <p class="year">2020 - 2024
+                            
+                        </p><div class="timeline-section experience">
+           
             <div class="experience-card">
                 <div class="experience-header">
-                    <h3>Freelance Video Editor</h3>
-                    <h4>Fiverr</h4>
+                    
                 </div>
                 <ul class="experience-details">
                     <li>Delivered professional edits, color correction, and audio synchronization</li>
@@ -1213,6 +1434,10 @@
                 </ul>
             </div>
         </div>
+                    </div>
+                </div>
+            </div>
+        
     </div>
 </div>
     
@@ -1221,7 +1446,7 @@
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6" data-aos="fade-up">
                     <h2 class="display-6 mb-4">Get in Touch</h2>
                     <div class="mb-4">
                         <p class="mb-2">
@@ -1234,11 +1459,11 @@
                         </p>
                         <p class="mb-2">
                             <i class="bi bi-geo-alt-fill text-danger me-2"></i>
-                            347/1, Horepola, Godakawela
+                            007/1, Sri lanka, Godakawela
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-6" data-aos="fade-up">
                     <form>
                         <div class="mb-3">
                             <input type="text" class="form-control bg-dark text-white border-dark" placeholder="Name">
